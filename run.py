@@ -23,4 +23,14 @@ class Board:
         for row in self.board:
             print(" ".join(row))
 
-            
+    def guess(self, x, y):
+        self.guesses.append((x, y))
+        self.board[x][y] = "X"
+
+        if (x, y) in self.ships:
+            self.board[x][y] = "*"
+            return "Hit"
+        else:
+            return "Miss"
+
+    def add_ships
