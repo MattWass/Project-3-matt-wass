@@ -50,6 +50,10 @@ def random_point(size):
 
 
 def valid_coordinates(x, y, board):
+    if 0 <= x < board.size and 0 <= y < board.size:
+        return True
+    print("Invalid coordinates, please try again")
+    return False
 
 def populate_board(board):
 
