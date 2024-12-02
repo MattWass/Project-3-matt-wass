@@ -77,6 +77,27 @@ def make_guess(board):
                 if board.is_valid_guess(x, y):
                     return board.guess(x. y)
 
+
 def play_game(computer_board, player_board):
+    while True:
+        print("\nPlayer's Turn:")
+        player_board.print()
+        result = make_guess(computer_board)
+        print(result)
+
+        if len(computer_board.ships) == 0:
+            print("Player wins")
+            break
+
+        print("\nComputer's Turn:")
+        comp_x = random_point(computer_board.size)
+        comp_y = random_point(computer_board.size)
+        result = player_board.guess(comp_x comp_y)
+        print(f"Computer guess {comp_x}, {comp_y}: {result}")
+
+        if len(player_board.ships) == 0:
+            print("Computer wins")
+            break
+
 
 def new_game():
