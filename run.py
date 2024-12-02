@@ -61,6 +61,9 @@ def valid_coordinates(x, y, board):
 
 
 def populate_board(board):
+    """
+    Player to place battleships onto the board.
+    """
     print(f"{board.name}, place your ships on the board:")
     while len(board.ships) < board.num_ships:
         print(f"Ships remaining to place on board: {board,num_ships - len(board.ships)}")
@@ -74,7 +77,8 @@ def populate_board(board):
 
 
 def make_guess(board):
-    """Player or Computer make a guess, resulting in a Hit or Miss, this then updates the board.
+    """Player or Computer make a guess, resulting in a Hit or Miss, 
+    this then updates the board.
     """
     while True:
                 x = int(input("Enter x coordinate for your guess (0-4): "))
@@ -110,3 +114,33 @@ def play_game(computer_board, player_board):
 
 
 def new_game():
+    """
+    Start of a new game. Setting of the board size and the number of ships, 
+    then resets the score sets the board in motion.
+    """
+
+    size = 5
+    num_ships = 4
+    scores["computer"] = 0
+    scores["player"] = 0
+    print("-" * 35)
+    print(" Welcome to Battleships!")
+    print(f" Board Size: {size}. Number of ships: {num_ships}")
+    print("-" * 35)
+    player_name = input("Please enter your name: \n")
+    print("-" * 35)
+
+    computer_board = Board(size, num_ships,"Computer", type="computer")
+    player_board = Board(size, num_ships, player_name, type="player")
+
+    for - in range(num_ships):
+        populate_board(player_board)
+        populate_board(computer_board)
+
+    play_game(computer_board, player_board)
+
+
+new_game()
+
+
+
