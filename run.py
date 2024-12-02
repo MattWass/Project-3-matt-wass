@@ -50,6 +50,10 @@ def random_point(size):
 
 
 def valid_coordinates(x, y, board):
+    """
+    check for valid coordinates for the placing of a battleship or making 
+    a guess.
+    """
     if 0 <= x < board.size and 0 <= y < board.size:
         return True
     print("Invalid coordinates, please try again")
@@ -70,6 +74,8 @@ def populate_board(board):
 
 
 def make_guess(board):
+    """Player or Computer make a guess, resulting in a Hit or Miss, this then updates the board.
+    """
     while True:
                 x = int(input("Enter x coordinate for your guess (0-4): "))
                 y = int(input("Enter y coordinate for your guess (0-4): "))
@@ -79,6 +85,9 @@ def make_guess(board):
 
 
 def play_game(computer_board, player_board):
+    """
+    Play game function, allowing alternate turns.
+    """
     while True:
         print("\nPlayer's Turn:")
         player_board.print()
