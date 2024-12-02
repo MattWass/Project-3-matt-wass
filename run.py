@@ -101,7 +101,9 @@ def make_guess(board, is_computer_turn=False, x=None, y=None):
             try:
                 x = int(input("Enter x coordinate for your guess (0-4): "))
                 y = int(input("Enter y coordinate for your guess (0-4): "))
-                if valid_coordinates(x, y, board) and (x, y) not in board.guesses:
+                valid_coord = valid_coordinates(x, y, board)
+                not_guessed = (x, y) not in board.guesses
+                if valid_coord and not_guessed:
                     return board.guess(x, y)
                 else:
                     print("Invalid or already guessed location. Try again.")
