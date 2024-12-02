@@ -151,7 +151,7 @@ def new_game():
     print("-" * 35)
     print(" Welcome to Battleships!")
     print(f" Board Size: {size}. Number of ships: {num_ships}")
-    print("The top left corner of the board is row: 0, col 0")
+    print("Top left corner of board is row: 0, col 0")
     print("-" * 35)
     player_name = input("Please enter your name: \n")
     print("-" * 35)
