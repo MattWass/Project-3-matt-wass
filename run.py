@@ -67,7 +67,7 @@ def populate_board(board):
     """
     print(f"{board.name}, place your ships on the board:")
     while len(board.ships) < board.num_ships:
-        print(f"Ships remaining to place on board: {board,num_ships - len(board.ships)}")
+        print(f"Ships remaining to place on board: {board.num_ships - len(board.ships)}")
         x = int(input("Enter x coordinate for your battleship (0-4): "))
         y = int(input("Enter y coordinate for your battleship (0-4): "))
 
@@ -78,7 +78,12 @@ def populate_board(board):
 
 
 def make_guess(board):
-     """Allow the player to make a guess, updating the board."""
+     """Allows the player or computer to make a guess, updating the board."""
+     if is_computer_turn:
+        x = random_point(board.size)
+        y = random_point(board.size)
+        print(f"Computer guesses {x}, {y}")
+
      while True:
         x = int(input("Enter x coordinate for your guess (0-4): "))
         y = int(input("Enter y coordinate for your guess (0-4): "))
@@ -87,6 +92,8 @@ def make_guess(board):
             return board.guess(x, y)
         else:
             print("Invalid or already guessed location. Try again.")
+        
+        return board.guess(x, y)
 
 
 def play_game(computer_board, player_board):
