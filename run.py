@@ -98,13 +98,15 @@ def make_guess(board, is_computer_turn=False, x=None, y=None):
         print(f"Computer guesses {x}, {y}")
     else:
         while True:
-            x = int(input("Enter x coordinate for your guess (0-4): "))
-            y = int(input("Enter y coordinate for your guess (0-4): "))
-
-            if valid_coordinates(x, y, board) and (x, y) not in board.guesses:
-                return board.guess(x, y)
-            else:
-                print("Invalid or already guessed location. Try again.")
+            try:
+                x = int(input("Enter x coordinate for your guess (0-4): "))
+                y = int(input("Enter y coordinate for your guess (0-4): "))
+                if valid_coordinates(x, y, board) and (x, y) not in board.guesses:
+                    return board.guess(x, y)
+                else:
+                    print("Invalid or already guessed location. Try again.")
+            except ValueError:
+                print("Invalid input. Please enter a number between 0 and 4.")
 
     return board.guess(x, y)
 
@@ -163,3 +165,4 @@ def new_game():
 
 
 new_game()
+
