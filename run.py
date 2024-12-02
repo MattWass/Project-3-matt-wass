@@ -55,6 +55,7 @@ def valid_coordinates(x, y, board):
     print("Invalid coordinates, please try again")
     return False
 
+
 def populate_board(board):
     print(f"{board.name}, place your ships on the board:")
     while len(board.ships) < board.num_ships:
@@ -66,9 +67,15 @@ def populate_board(board):
             board.add_ship(x, y)
         else:
             print("This position is already taken or is invalid. Try again.")
-        
+
 
 def make_guess(board):
+    while True:
+                x = int(input("Enter x coordinate for your guess (0-4): "))
+                y = int(input("Enter y coordinate for your guess (0-4): "))
+
+                if board.is_valid_guess(x, y):
+                    return board.guess(x. y)
 
 def play_game(computer_board, player_board):
 
