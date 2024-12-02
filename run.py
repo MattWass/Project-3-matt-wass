@@ -47,12 +47,12 @@ def random_point(size):
     """
     Helper function to return a random integer between 0 and size
     """
-    return randint(0, size -1)
+    return randint(0, size - 1)
 
 
 def valid_coordinates(x, y, board):
     """
-    check for valid coordinates for the placing of a battleship or making 
+    Check for valid coordinates for the placing of a battleship or making
     a guess.
     """
     if 0 <= x < board.size and 0 <= y < board.size:
@@ -67,7 +67,8 @@ def populate_board(board):
     """
     print(f"{board.name}, place your ships on the board:")
     while len(board.ships) < board.num_ships:
-        print(f"Ships remaining to place on board: {board.num_ships - len(board.ships)}")
+        remaining_ships = board.num_ships - len(board.ships)
+        print(f"Ships remaining to place on board: {remaining_ships}")
         x = int(input("Enter x coordinate for your battleship (0-4): "))
         y = int(input("Enter y coordinate for your battleship (0-4): "))
 
@@ -80,12 +81,10 @@ def populate_board(board):
 def make_guess(board, is_computer_turn=False, x=None, y=None):
     """Allows the player or computer to make a guess, updating the board."""
     if is_computer_turn:
-        
         x = random_point(board.size)
         y = random_point(board.size)
         print(f"Computer guesses {x}, {y}")
     else:
-        
         while True:
             x = int(input("Enter x coordinate for your guess (0-4): "))
             y = int(input("Enter y coordinate for your guess (0-4): "))
@@ -94,7 +93,7 @@ def make_guess(board, is_computer_turn=False, x=None, y=None):
                 return board.guess(x, y)
             else:
                 print("Invalid or already guessed location. Try again.")
-    
+
     return board.guess(x, y)
 
 
@@ -125,7 +124,7 @@ def play_game(computer_board, player_board):
 
 def new_game():
     """
-    Start of a new game. Setting of the board size and the number of ships, 
+    Start of a new game. Setting of the board size and the number of ships,
     then resets the score sets the board in motion.
     """
 
@@ -140,7 +139,7 @@ def new_game():
     player_name = input("Please enter your name: \n")
     print("-" * 35)
 
-    computer_board = Board(size, num_ships,"Computer", type="computer")
+    computer_board = Board(size, num_ships, "Computer", type="computer")
     player_board = Board(size, num_ships, player_name, type="player")
 
     for _ in range(num_ships):
@@ -151,6 +150,3 @@ def new_game():
 
 
 new_game()
-
-
-
