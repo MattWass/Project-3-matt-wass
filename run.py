@@ -5,8 +5,8 @@ scores = {"computer": 0, "player": 0}
 
 class Board:
     """
-    Main board class. Allows for better organization. Sets the board size, 
-    the amount of and placing ships, the player name and computer board types 
+    Main board class. Allows for better organization. Sets the board size,
+    the amount of and placing ships, the player name and computer board types
     and updates in regards to hits or misses
     """
 
@@ -33,13 +33,14 @@ class Board:
         else:
             return "Miss"
 
-    def add_ship(self, x, y, type="computer"):
+    def add_ship(self, x, y):
+        """Add a ship to the board."""
         if len(self.ships) >= self.num_ships:
-            print("Error: you cannot add any more ships")
-            else:
-                self.ships.append((x, y))
-                if self.type == "player":
-                    self.board[x][y] = "@"
+            print("Error: You cannot add any more ships.")
+        else:
+            self.ships.append((x, y))
+            if self.type == "player":
+                self.board[x][y] = "@"
 
 
 def random_point(size):
@@ -77,15 +78,15 @@ def populate_board(board):
 
 
 def make_guess(board):
-    """Player or Computer make a guess, resulting in a Hit or Miss, 
-    this then updates the board.
-    """
-    while True:
-                x = int(input("Enter x coordinate for your guess (0-4): "))
-                y = int(input("Enter y coordinate for your guess (0-4): "))
+     """Allow the player to make a guess, updating the board."""
+     while True:
+        x = int(input("Enter x coordinate for your guess (0-4): "))
+        y = int(input("Enter y coordinate for your guess (0-4): "))
 
-                if board.is_valid_guess(x, y):
-                    return board.guess(x. y)
+        if valid_coordinates(x, y, board) and (x, y) not in board.guesses:
+            return board.guess(x, y)
+        else:
+            print("Invalid or already guessed location. Try again.")
 
 
 def play_game(computer_board, player_board):
@@ -105,7 +106,7 @@ def play_game(computer_board, player_board):
         print("\nComputer's Turn:")
         comp_x = random_point(computer_board.size)
         comp_y = random_point(computer_board.size)
-        result = player_board.guess(comp_x comp_y)
+        result = player_board.guess(comp_x, comp_y)
         print(f"Computer guess {comp_x}, {comp_y}: {result}")
 
         if len(player_board.ships) == 0:
@@ -133,7 +134,7 @@ def new_game():
     computer_board = Board(size, num_ships,"Computer", type="computer")
     player_board = Board(size, num_ships, player_name, type="player")
 
-    for - in range(num_ships):
+    for _ in range(num_ships):
         populate_board(player_board)
         populate_board(computer_board)
 
