@@ -78,6 +78,18 @@ def populate_board(board):
             print("This position is already taken or is invalid. Try again.")
 
 
+def populate_computer_ships(board):
+    """
+    Computer places its ships randomly on the board.
+    """
+    while len(board.ships) < board.num_ships:
+        x = random_point(board.size)
+        y = random_point(board.size)
+
+        if (x, y) not in board.ships:
+            board.add_ship(x, y)
+
+
 def make_guess(board, is_computer_turn=False, x=None, y=None):
     """Allows the player or computer to make a guess, updating the board."""
     if is_computer_turn:
