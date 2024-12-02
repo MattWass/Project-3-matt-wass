@@ -10,7 +10,7 @@ Welcome to [https://project-3-matt-wass-9b18f1b1e57e.herokuapp.com/]
 
 ## Game Instructions
 
-Battleships is an all time classic amongst games.
+Battleships is an all time classic game, with various different iterations over the years.
 
 This version starts with the player entering their name.
 
