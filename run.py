@@ -77,23 +77,25 @@ def populate_board(board):
             print("This position is already taken or is invalid. Try again.")
 
 
-def make_guess(board):
-     """Allows the player or computer to make a guess, updating the board."""
-     if is_computer_turn:
+def make_guess(board, is_computer_turn=False, x=None, y=None):
+    """Allows the player or computer to make a guess, updating the board."""
+    if is_computer_turn:
+        
         x = random_point(board.size)
         y = random_point(board.size)
         print(f"Computer guesses {x}, {y}")
-
-     while True:
-        x = int(input("Enter x coordinate for your guess (0-4): "))
-        y = int(input("Enter y coordinate for your guess (0-4): "))
-
-        if valid_coordinates(x, y, board) and (x, y) not in board.guesses:
-            return board.guess(x, y)
-        else:
-            print("Invalid or already guessed location. Try again.")
+    else:
         
-        return board.guess(x, y)
+        while True:
+            x = int(input("Enter x coordinate for your guess (0-4): "))
+            y = int(input("Enter y coordinate for your guess (0-4): "))
+
+            if valid_coordinates(x, y, board) and (x, y) not in board.guesses:
+                return board.guess(x, y)
+            else:
+                print("Invalid or already guessed location. Try again.")
+    
+    return board.guess(x, y)
 
 
 def play_game(computer_board, player_board):
