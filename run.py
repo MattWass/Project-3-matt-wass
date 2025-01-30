@@ -77,7 +77,7 @@ def populate_board(board):
                 break
             except ValueError:
                 print("Invalid input. Please enter a valid number.")
-                
+
         if valid_coordinates(x, y, board) and (x, y) not in board.ships:
             board.add_ship(x, y)
         else:
@@ -105,16 +105,16 @@ def make_guess(board, is_computer_turn=False, x=None, y=None):
     else:
         while True:
             try:
-                x = int(input("Enter x coordinate for your guess (0-4): "))
-                y = int(input("Enter y coordinate for your guess (0-4): "))
+                x = int(input("Enter x coordinate for your guess: ").strip())
+                y = int(input("Enter y coordinate for your guess: ").strip())
                 valid_coord = valid_coordinates(x, y, board)
                 not_guessed = (x, y) not in board.guesses
                 if valid_coord and not_guessed:
-                    return board.guess(x, y)
+                    break
                 else:
                     print("Invalid or already guessed location. Try again.")
             except ValueError:
-                print("Invalid input. Please enter a number between 0 and 4.")
+                print("Invalid input. Please enter a number.")
 
     return board.guess(x, y)
 
