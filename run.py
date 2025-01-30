@@ -69,9 +69,15 @@ def populate_board(board):
     while len(board.ships) < board.num_ships:
         remaining_ships = board.num_ships - len(board.ships)
         print(f"Ships remaining to place on board: {remaining_ships}")
-        x = int(input("Enter x coordinate for your battleship (0-4): "))
-        y = int(input("Enter y coordinate for your battleship (0-4): "))
 
+        while True:
+            try:
+                x = int(input("Enter x coordinate for your battleship: ").strip())
+                y = int(input("Enter y coordinate for your battleship: ").strip())
+                break
+            except ValueError:
+                print("Invalid input. Please enter a valid number.")
+                
         if valid_coordinates(x, y, board) and (x, y) not in board.ships:
             board.add_ship(x, y)
         else:
