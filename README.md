@@ -63,7 +63,7 @@ The image below shows that you cannot enter the same coordinates twice and that 
   - Have battleship sizing larger than 1x1
   - Increase board size and also number of ships on the board
 
-## Testing
+## Manual Testing
 
  - I have tested the project through the CI python linter, as seen below and the project came back all clear, with no errors found.
   - I have also tested the project in my local terminal as well as the Code Institute Heroku terminal
@@ -73,6 +73,14 @@ The image below shows that you cannot enter the same coordinates twice and that 
   - Upon testing the game manually I managed to play the game in its entirety, coming to the conclusion of "player wins" as seen below.
 
   ![alt text](image-10.png)
+
+  - After further update and troubleshooting of my project, additional testing has been done to receive the "play again? (y/n):" message as seen below. This addition is a much more user friendly way of restarting the game.
+
+  ![alt text](image-11.png)
+
+  Upon selecting "y" to restart the game, we can see that the game has gone back to the enter name section, ready for another game of battleships.
+
+  ![alt text](image-12.png)
 
 ### Bugs
 
@@ -99,6 +107,7 @@ Solved Bugs
 - Code Institute for the deployment terminal
 - Student Care, for all their support and guidance over what has been a very challenging time.
 - My family for their unwavering support 
+- I would like to thank Roman from the Tutoring team for advising me on the steps I needed to take for this resubmit. Helping me go through the finishing touches, Roman's guidance has been very much appreciated.
 
 ### Content
 
