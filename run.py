@@ -137,10 +137,8 @@ def play_game(computer_board, player_board):
             break
 
         print("\nComputer's Turn:")
-        comp_x = random_point(computer_board.size)
-        comp_y = random_point(computer_board.size)
-        result = player_board.guess(comp_x, comp_y)
-        print(f"Computer guess {comp_x}, {comp_y}: {result}")
+        result = make_guess(player_board, is_computer_turn=True)
+        print(result)
 
         if len(player_board.ships) == 0:
             print("Computer wins")
