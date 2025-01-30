@@ -70,6 +70,10 @@ The image below shows that you cannot enter the same coordinates twice and that 
 
   ![alt text](image-1.png)
 
+  - Upon testing the game manually I managed to play the game in its entirety, coming to the conclusion of "player wins" as seen below.
+
+  ![alt text](image-10.png)
+
 ### Bugs
 
 Solved Bugs
