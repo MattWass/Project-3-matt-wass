@@ -134,7 +134,9 @@ def play_game(computer_board, player_board):
 
         if len(computer_board.ships) == 0:
             print("Player wins")
-            break
+            if input("Play again? (y/n): ").strip().lower() == "y":
+                new_game()
+            return
 
         print("\nComputer's Turn:")
         result = make_guess(player_board, is_computer_turn=True)
@@ -142,7 +144,9 @@ def play_game(computer_board, player_board):
 
         if len(player_board.ships) == 0:
             print("Computer wins")
-            break
+            if input("Play again? (y/n): ").strip().lower() == "y":
+                new_game()
+            return
 
 
 def new_game():
