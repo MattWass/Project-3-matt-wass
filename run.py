@@ -116,7 +116,10 @@ def make_guess(board, is_computer_turn=False, x=None, y=None):
             except ValueError:
                 print("Invalid input. Please enter a number.")
 
-    return board.guess(x, y)
+    result = board.guess(x, y)
+    if result == "Hit" and (x, y) in board.ships:
+        board.ships.remove((x, y))
+    return result
 
 
 def play_game(computer_board, player_board):
