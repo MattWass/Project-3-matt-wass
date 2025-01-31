@@ -86,6 +86,10 @@ The image below shows that you cannot enter the same coordinates twice and that 
 
   ![alt text](image-12.png)
 
+  - With further manual testing of my project, I reached a battleships conclusion of computer wins as seen below.
+
+  ![alt text](image-14.png)
+
 ### Bugs
 
 Solved Bugs
