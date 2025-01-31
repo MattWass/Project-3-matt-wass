@@ -81,7 +81,7 @@ The image below shows that you cannot enter the same coordinates twice and that 
 
    ### Manual Testing
 
-  - The relevant testing and code has been added so that exception handling for empty or invalid values now displays appropriately, no longer crashing the app. Please see the image below.
+  - The relevant testing and code has been added so that exception handling for empty or invalid values now displays appropriately, no longer crashing the app. The expected and actual outcome now align, which is for the app to show relevant feedback in regards to incorrect values been added. Please see the image below.
 
   ![alt text](image-15.png)
 
@@ -93,7 +93,7 @@ The image below shows that you cannot enter the same coordinates twice and that 
 
   ![alt text](image-11.png)
 
-  Upon selecting "y" to restart the game, we can see that the game has gone back to the enter name section, ready for another game of battleships. The expected outcome was for multiple games of battleships to be played without the need for re-running the program. This now allows for multiple games of battleships without having to re-run the program and so the actual outcome has also been met as expected.
+  - Upon selecting "y" to restart the game, we can see that the game has gone back to the enter name section, ready for another game of battleships. The expected outcome was for multiple games of battleships to be played without the need for re-running the program. This now allows for multiple games of battleships without having to re-run the program and so the actual outcome has also been met as expected.
 
   ![alt text](image-12.png)
 
