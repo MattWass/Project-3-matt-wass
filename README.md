@@ -74,6 +74,10 @@ The image below shows that you cannot enter the same coordinates twice and that 
 
   ![alt text](image-13.png)
 
+  - The relevant testing and code has been added so that exception handling for empty or invalid values now displays appropriately, no longer crashing the app. Please see the image below.
+
+  ![alt text](image-15.png)
+
   - Upon testing the game manually I managed to play the game in its entirety, coming to the conclusion of "player wins" as seen below.
 
   ![alt text](image-10.png)
