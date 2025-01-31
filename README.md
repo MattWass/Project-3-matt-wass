@@ -72,6 +72,8 @@ The image below shows that you cannot enter the same coordinates twice and that 
 
   - The project has been retested through the CI python linter before resubmission. This gave a result of all clear with no errors found as seen below.
 
+  ### Manual Testing
+
   ![alt text](image-13.png)
 
   - The relevant testing and code has been added so that exception handling for empty or invalid values now displays appropriately, no longer crashing the app. Please see the image below.
@@ -86,7 +88,7 @@ The image below shows that you cannot enter the same coordinates twice and that 
 
   ![alt text](image-11.png)
 
-  Upon selecting "y" to restart the game, we can see that the game has gone back to the enter name section, ready for another game of battleships.
+  Upon selecting "y" to restart the game, we can see that the game has gone back to the enter name section, ready for another game of battleships. This allows for multiple games of battleships without having to re-run the program.
 
   ![alt text](image-12.png)
 
