@@ -65,6 +65,11 @@ The image below shows that you cannot enter the same coordinates twice and that 
 
 ## Testing
 
+ - I have tested the battleships game in different browsers:
+    - Microsoft Edge
+    - Google Chrome
+    - Mozilla Firefox
+
  - I have tested the project through the CI python linter, as seen below and the project came back all clear, with no errors found.
   - I have also tested the project in my local terminal as well as the Code Institute Heroku terminal
 
