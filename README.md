@@ -72,9 +72,9 @@ The image below shows that you cannot enter the same coordinates twice and that 
 
   - The project has been retested through the CI python linter before resubmission. This gave a result of all clear with no errors found as seen below.
 
-  ### Manual Testing
-
   ![alt text](image-13.png)
+
+   ### Manual Testing
 
   - The relevant testing and code has been added so that exception handling for empty or invalid values now displays appropriately, no longer crashing the app. Please see the image below.
 
