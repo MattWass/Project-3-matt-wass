@@ -89,7 +89,7 @@ The image below shows that you cannot enter the same coordinates twice and that 
 
   ![alt text](image-10.png)
 
-  - After further update and troubleshooting of my project, additional testing has been done to receive the "play again? (y/n):" message as seen below. This addition is a much more user friendly way of restarting the game. The expectation was for players to be given the opportunity to have another game of battleships. With this now displayimg after the winner has been determined, that actual outcome is relative to the expected outcome.
+  - After further update and troubleshooting of my project, additional testing has been done to receive the "play again? (y/n):" message as seen below. This addition is a much more user friendly way of restarting the game. The expectation was for players to be given the opportunity to have another game of battleships. With this now displaying after the winner has been determined, that actual outcome is relative to the expected outcome.
 
   ![alt text](image-11.png)
 
