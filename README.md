@@ -84,15 +84,15 @@ The image below shows that you cannot enter the same coordinates twice and that 
 
   ![alt text](image-10.png)
 
-  - After further update and troubleshooting of my project, additional testing has been done to receive the "play again? (y/n):" message as seen below. This addition is a much more user friendly way of restarting the game.
+  - After further update and troubleshooting of my project, additional testing has been done to receive the "play again? (y/n):" message as seen below. This addition is a much more user friendly way of restarting the game. The expectation was for players to be given the opportunity to have another game of battleships. With this now displayimg after the winner has been determined, that actual outcome is relative to the expected outcome.
 
   ![alt text](image-11.png)
 
-  Upon selecting "y" to restart the game, we can see that the game has gone back to the enter name section, ready for another game of battleships. This allows for multiple games of battleships without having to re-run the program.
+  Upon selecting "y" to restart the game, we can see that the game has gone back to the enter name section, ready for another game of battleships. The expected outcome was for multiple games of battleships to be played without the need for re-running the program. This now allows for multiple games of battleships without having to re-run the program and so the actual outcome has also been met as expected.
 
   ![alt text](image-12.png)
 
-  - With further manual testing of my project, I reached a battleships conclusion of computer wins as seen below.
+  - With further manual testing of my project, I reached a battleships conclusion of computer wins as seen below. This fulfils the expected and actual outcome of the computer sinking all the player battleships.
 
   ![alt text](image-14.png)
 
