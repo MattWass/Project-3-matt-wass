@@ -63,12 +63,16 @@ The image below shows that you cannot enter the same coordinates twice and that 
   - Have battleship sizing larger than 1x1
   - Increase board size and also number of ships on the board
 
-## Manual Testing
+## Testing
 
  - I have tested the project through the CI python linter, as seen below and the project came back all clear, with no errors found.
   - I have also tested the project in my local terminal as well as the Code Institute Heroku terminal
 
   ![alt text](image-1.png)
+
+  - The project has been retested through the CI python linter before resubmission. This gave a result of all clear with no errors found as seen below.
+
+  ![alt text](image-13.png)
 
   - Upon testing the game manually I managed to play the game in its entirety, coming to the conclusion of "player wins" as seen below.
 

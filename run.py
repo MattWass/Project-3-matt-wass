@@ -72,8 +72,8 @@ def populate_board(board):
 
         while True:
             try:
-                x = int(input("Enter x coordinate for your battleship: ").strip())
-                y = int(input("Enter y coordinate for your battleship: ").strip())
+                x = int(input("Enter x coordinate for battleship: ").strip())
+                y = int(input("Enter y coordinate for battleship: ").strip())
                 break
             except ValueError:
                 print("Invalid input. Please enter a valid number.")
